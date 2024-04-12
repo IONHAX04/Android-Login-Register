@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserProfileEditPage">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/rounded_bg"
+        android:src="@drawable/back_btn" />
+
+    <ScrollView
+        android:id="@+id/infoDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonGroups"
+        android:layout_below="@id/backBtn"
+        android:padding="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layoutPersonalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Basic Info"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/firstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter First Name"
+                    android:padding="10dp"
+                    android:textColorHint="@color/primary" />
+
+                <EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter Last Name"
+                    android:padding="10dp"
+                    android:textColorHint="@color/primary" />
+
+                <EditText
+                    android:id="@+id/rollNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter Roll Number"
+                    android:padding="10dp"
+                    android:textColorHint="@color/primary" />
+
+                <EditText
+                    android:id="@+id/collegeMailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter College Mail ID"
+                    android:padding="10dp"
+                    android:textColorHint="@color/primary" />
+
+                <EditText
+                    android:id="@+id/personalMailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter Personal Mail ID"
+                    android:padding="10dp"
+                    android:textColorHint="@color/primary" />
+
+
+                <EditText
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:hint="Enter Gender"
+                    android:padding="10dp"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary" />
+
+
+                <RelativeLayout
+                    android:id="@+id/dateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/common_button_border"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/dateOfBirthText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Pick Your DOB"
+                        android:textColor="@color/primary"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:id="@+id/calender"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/calendar" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/academicDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Additional Info"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/cgpa"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/percentage_cgpa_options"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/sslcPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="SSLC"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/hsc"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/percentage_cgpa_options"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/hscPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="HSC"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/diploma"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/percentage_cgpa_options"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/diplomaPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="Diploma"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/ug"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/percentage_cgpa_options"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/ugPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="UG"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/backlogs"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/yes_no"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/backlogsCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="Backlogs"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/currentBacklogs"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/yes_no"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/currentBacklogPcentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="Curent Backlogs"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/workExp"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/yes_no"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/workExpCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="Work Experience"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/pgCgpa"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/percentage_cgpa_options"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/pgPercentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="PG"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/placement"
+                        style="@style/CustomSpinnerStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_bg"
+                        android:entries="@array/yes_no"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/interestPlacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/dropdown_edittext"
+                        android:hint="Placement Interest"
+                        android:padding="10dp"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonGroups"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/common_button_border"
+            android:text="Back"
+            android:textColor="@color/primary"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/common_btn_bg"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

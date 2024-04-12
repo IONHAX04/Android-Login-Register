@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">THIRU</string>
+    <string name="sslc_percentage_hint">Enter your SSLC Percentage</string>
+    <string name="sslc_cgpa_hint">Enter your SSLC CGPA</string>
+    <string name="hsc_percentage_hint">Enter your HSC Percentage</string>
+    <string name="hsc_cgpa_hint">Enter your HSC CGPA</string>
+    <string-array name="percentage_cgpa_options">
+        <item>Select</item>
+        <item>Percentage</item>
+        <item>CGPA</item>
+    </string-array>
+    <string-array name="yes_no">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <dimen name="selected_padding">0dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+
+    <color name="selected_background">#FFC107</color>
+    <color name="default_background">#FFFFFF</color>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

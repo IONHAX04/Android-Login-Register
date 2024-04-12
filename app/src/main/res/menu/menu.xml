@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/categories"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_drives"
+            android:icon="@drawable/drawable"
+            android:title="Drives" />
+        <item
+            android:id="@+id/nav_tests"
+            android:icon="@drawable/courses"
+            android:title="Tests" />
+        <item
+            android:id="@+id/nav_analysis"
+            android:icon="@drawable/analysis"
+            android:title="Analysis" />
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/user_icon"
+            android:title="User" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+    </group>
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/signout"
+        android:title="Logout" />
+</menu>
